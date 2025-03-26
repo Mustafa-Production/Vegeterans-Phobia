@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegeterans Phobia</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #f8f8f8; 
+            margin: 0; 
+            padding: 0; 
+        }
+        header { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            background-color: #b22222; 
+            color: white; 
+            padding: 20px; 
+            font-size: 28px; 
+            font-weight: bold; 
+            position: relative;
+        }
+        header img { 
+            width: 80px; 
+            height: auto; 
+        }
+        .login-btn {
+            background-color: white;
+            color: #b22222;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #b22222;
+            transition: 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #b22222;
+            color: white;
+        }
+        .container { 
+            width: 80%; 
+            margin: auto; 
+            padding: 20px; 
+        }
+        .product { 
+            display: inline-block; 
+            width: 30%; 
+            margin: 15px; 
+            padding: 15px; 
+            background: white; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        img { 
+            width: 100%; 
+            border-radius: 10px; 
+        }
+        button { 
+            background-color: #b22222; 
+            color: white; 
+            padding: 10px; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 16px; 
+            border-radius: 5px; 
+        }
+        button:hover { 
+            background-color: #8b0000; 
+        }
+        .feedback { 
+            margin-top: 20px; 
+            padding: 15px; 
+            background: white; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        textarea { 
+            width: 90%; 
+            padding: 10px; 
+            margin: 10px 0; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+        }
+        footer { 
+            background-color: #b22222; 
+            color: white; 
+            padding: 15px; 
+            font-size: 16px; 
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Vegeterans Phobia.jpg" alt="شعار الموقع">
+        Vegeterans Phobia 
+        <a href="https://yourwebsite.com" class="login-btn">دخول الموقع</a>
+    </header>
+    <div class="container">
+        <h2>منتجاتنا</h2>
+        <div class="product"><img src="images/small_beef.jpg" alt="لحم بقري صغير"><h3>لحم بقري صغير</h3><p>السعر: 320 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/big_beef.jpg" alt="لحم بقري كبير"><h3>لحم بقري كبير</h3><p>السعر: 280 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/medium_beef.jpg" alt="لحم بقري متوسط"><h3>لحم بقري متوسط</h3><p>السعر: 300 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/small_buffalo.jpg" alt="لحم جاموسي صغير"><h3>لحم جاموسي صغير</h3><p>السعر: 290 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/big_buffalo.jpg" alt="لحم جاموسي كبير"><h3>لحم جاموسي كبير</h3><p>السعر: 270 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/medium_buffalo.jpg" alt="لحم جاموسي متوسط"><h3>لحم جاموسي متوسط</h3><p>السعر: 280 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/lamb.jpg" alt="لحم ضاني"><h3>لحم ضاني</h3><p>السعر: 350 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/minced.jpg" alt="لحم مفروم"><h3>لحم مفروم</h3><p>السعر: 260 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/frozen_liver.jpg" alt="كبدة مجمدة"><h3>كبدة مجمدة</h3><p>السعر: 180 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/fresh_liver.jpg" alt="كبدة فريش"><h3>كبدة فريش</h3><p>السعر: 210 جنيه للكيلو</p><button>اطلب الآن</button></div>
+ <div class="product"><img src="images/sausage.jpg" alt="سجق"><h3>سجق</h3><p>السعر: 250 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/kofta.jpg" alt="كفتة"><h3>كفتة</h3><p>السعر: 270 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/mambar.jpg" alt="ممبار"><h3>ممبار</h3><p>السعر: 230 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/kawarea.jpg" alt="كوارع"><h3>كوارع</h3><p>السعر: 200 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/akawe.jpg" alt="عكاوي"><h3>عكاوي</h3><p>السعر: 350 جنيه للكيلو</p><button>اطلب الآن</button></div>
+        <div class="product"><img src="images/head_meat.jpg" alt="لحمة رأس"><h3>لحمة رأس</h3><p>السعر: 200 جنيه للكيلو</p><button>اطلب الآن</button></div>
+  <div class="feedback">
+            <h3>تقييم الخدمة</h3>
+            <p>رأيك يهمنا! شاركنا تجربتك.</p>
+            <textarea placeholder="أخبرنا عن رأيك..." rows="4"></textarea><br>
+            <button onclick="alert('شكراً لمشاركتك!')">إرسال التقييم</button>
+        </div>
+  <div class="share">
+            <h3>شارك موقعنا</h3>
+            <p>ساعدنا في نشر موقعنا مع أصدقائك!</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://Vegeterans-Phobia.com" target="_blank">مشاركة على فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=https://Vegeterans-Phobia.com&text=تحقق من هذا الموقع الرائع!" target="_blank">مشاركة على تويتر</a>
+            <a href="https://api.whatsapp.com/send?text=تحقق من هذا الموقع الرائع! https://Vegeterans-Phobia.com" target="_blank">مشاركة على واتساب</a>
+        </div>
+
+    </div>
+    <footer>
+        <p>للدخول إلى الموقع اضغط <a href="https://yourwebsite.com" style="color: yellow; text-decoration: underline;">هنا</a></p>
+        <p>للتواصل: 01006572931 | واتساب: 01122677238 | البريد الإلكتروني: contact@vegeteransphobia.com</p>
+    </footer>
+</body>
+</html>
