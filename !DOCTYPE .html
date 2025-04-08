@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dairy Falls</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+    }
+    .search-box {
+      margin: 20px;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 50%;
+      font-size: 16px;
+    }
+    .products {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 0 10px;
+      width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product h3 {
+      margin: 0 0 10px;
+    }
+    .buy-button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .buy-button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+    .contact {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .rating-box {
+      margin: 30px auto;
+      width: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .rating-box label, .rating-box select, .rating-box button {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    مرحب بكم معنا في موقع Dairy Falls
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="ابحث عن منتج..." onkeyup="searchProducts()">
+  </div>
+
+  <div class="products" id="productsContainer">
+    <div class="row">
+      <div class="product"><h3>لبن جاموسي</h3><p>28 جنيه</p><button class="buy-button">شراء</button></div>
+      <div class="product"><h3>لبن بقري</h3><p>18  جنيه</p><button class="buy-button">شراء</button></div>
+    </div>
+    <div class="row">
+      <div class="product"><h3>لبن أغنام</h3><p> 50 جنيه</p><button class="buy-button">شراء</button></div>
+      <div class="product"><h3>لبن ماعز</h3><p> 40 جنيه</p><button class="buy-button">شراء</button></div>
+    </div>
+    <div class="row">
+      <div class="product"><h3>جبنة قريش</h3><p>60 جنيه</p><button class="buy-button">شراء</button></div>
+<div class="product"><h3>زبادي</h3><p>50 جنيه</p><button class="buy-button">شراء</button></div>
+      
+    </div>
+    <div class="row">
+      <div class="product"><h3>قشطة</h3><p>230 جنيه</p><button class="buy-button">شراء</button></div>
+    <div class="product"><h3>آيس كريم</h3><p>200 جنيه</p><button class="buy-button">شراء</button></div>
+    </div>
+    <div class="row">
+      <div class="product"><h3>جبنة موزاريلا</h3><p>300 جنيه</p><button class="buy-button">شراء</button></div>
+      <div class="product"><h3>جبنة شيدر</h3><p>520 جنيه</p><button class="buy-button">شراء</button></div>
+    </div>
+    <div class="row">
+      <div class="product"><h3>جبنة قديمة</h3><p>300 جنيه</p><button class="buy-button">شراء</button></div>
+               <div class="product"><h3>جبنة رومي</h3><p>180 جنيه</p><button class="buy-button">شراء</button></div>
+    </div>
+<div class="product"><h3>زبدة بقري </h3><p>240 جنيه</p><button class="buy-button">شراء</button></div>
+<div class="product"><h3>زبدة جاموسي</h3><p>270 جنيه</p><button class="buy-button">شراء</button></div>
+    <div class="row">
+      
+    </div>
+  </div>
+
+  <div class="rating-box">
+    <label for="rating">قيم الخدمة:</label><br>
+    <select id="rating">
+      <option value="5">5 - ممتاز</option>
+      <option value="4">4 - جيد جدًا</option>
+      <option value="3">3 - جيد</option>
+      <option value="2">2 - مقبول</option>
+      <option value="1">1 - ضعيف</option>
+    </select><br>
+    <button onclick="submitRating()">إرسال</button>
+  </div>
+
+  <footer>
+    <div class="contact">
+      تواصل معنا: 01012345678 - 01123456789
+    </div>
+  </footer>
+
+  <script>
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll(".row");
+
+      rows.forEach(row => {
+        let match = false;
+        const products = row.querySelectorAll(".product");
+
+        products.forEach(product => {
+          const name = product.textContent.toLowerCase();
+          product.style.display = name.includes(input) ? "block" : "none";
+          if (name.includes(input)) match = true;
+        });
+
+        row.style.display = match ? "flex" : "none";
+      });
+    }
+
+    function submitRating() {
+      const rating = document.getElementById("rating").value;
+      alert("شكرًا لتقييمك! تقييمك: " + rating);
+    }
+  </script>
+</body>
+</html>
